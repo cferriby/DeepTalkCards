@@ -20,6 +20,7 @@ $(document).ready(function () {
 	for (var i = cardContainer.children.length - 1; i >= 0; i--) {
 		var rand = backArray[Math.floor(Math.random() * backArray.length)];
 		cardContainer.children[i].classList.add(rand);
+		cardContainer.children[i].style.display = 'block';
 	}
 
 	var animating = false;
