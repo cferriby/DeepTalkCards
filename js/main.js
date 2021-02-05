@@ -23,6 +23,8 @@ $(document).ready(function () {
 		//cardContainer.children[i].style.display = 'block';
 	}
 
+	cardContainer.children[cardContainer.children.length - 1].style.display = 'block';
+
 	var animating = false;
 	var cardsCounter = 0;
 	var numOfCards = cardContainer.children.length;
@@ -81,6 +83,8 @@ $(document).ready(function () {
 		if (animating) return;
 
 		$card = $(this);
+		$card.prev().css('display', 'block');
+
 		$cardNext = $(".card__choice.m--next", $card);
 		var startX = e.pageX || e.originalEvent.touches[0].pageX;
 
