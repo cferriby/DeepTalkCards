@@ -1,361 +1,177 @@
-/*! HTML5 Boilerplate v8.0.0 | MIT License | https://html5boilerplate.com/ */
-
-/* main.css 2.1.0 | MIT License | https://github.com/h5bp/main.css#readme */
-/*
- * What follows is the result of much research on cross-browser styling.
- * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
- * Kroc Camen, and the H5BP dev community and team.
- */
-
-/* ==========================================================================
-   Base styles: opinionated defaults
-   ========================================================================== */
-
-html {
-  color: #222;
-  font-size: 1em;
-  line-height: 1.4;
-}
-
-/*
- * Remove text-shadow in selection highlight:
- * https://twitter.com/miketaylr/status/12228805301
- *
- * Vendor-prefixed and regular ::selection selectors cannot be combined:
- * https://stackoverflow.com/a/16982510/7133471
- *
- * Customize the background color to match your design.
- */
-
-::-moz-selection {
-  background: #b3d4fc;
-  text-shadow: none;
-}
-
-::selection {
-  background: #b3d4fc;
-  text-shadow: none;
-}
-
-/*
- * A better looking default horizontal rule
- */
-
-hr {
-  display: block;
-  height: 1px;
-  border: 0;
-  border-top: 1px solid #ccc;
-  margin: 1em 0;
-  padding: 0;
-}
-
-/*
- * Remove the gap between audio, canvas, iframes,
- * images, videos and the bottom of their containers:
- * https://github.com/h5bp/html5-boilerplate/issues/440
- */
-
-audio,
-canvas,
-iframe,
-img,
-svg,
-video {
-  vertical-align: middle;
-}
-
-/*
- * Remove default fieldset styles.
- */
-
-fieldset {
-  border: 0;
+*, *:before, *:after {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-/*
- * Allow only vertical resizing of textareas.
- */
-
-textarea {
-  resize: vertical;
+html, body {
+  height: 100%;
+  width: 100%;
 }
 
-/* ==========================================================================
-   Author's custom styles
-   ========================================================================== */
-
-/* Stacked Cards component css */
 body {
-  overflow-x: hidden;
-  font-family: "Open Sans";
-  font-size: 12px;
-  background: #BFC7D0;
-  padding: 10%;
-}
-
-.no-transition {
-  -webkit-transition: none ! important;
-  -o-transition: none ! important;
-  transition: none ! important;
-}
-
-.stackedcards-overflow {
-    overflow-y: hidden !important;
-}
-
-.stackedcards.init {
-    opacity: 0;/* set the opacity to 0 if you want a fade-in effect to stacked cards on page load */
-}
-
-.stackedcards {
-    position: relative;
-}
-
-.stackedcards * {
-    -webkit-user-select: none;
-            -moz-user-select: none;
-             -ms-user-select: none;
-         user-select: none;
-}
-
-.stackedcards--animatable {
-    -webkit-transition: all 400ms ease;
-            -o-transition: all 400ms ease;
-            transition: all 400ms ease;
-}
-
-.stackedcards .stackedcards-container > *,
-.stackedcards-overlay {
-    position: absolute;
-    width: 100%; /* set 100% */
-    height: 300px; /* set 100% */
-    will-change: transform, opacity;
-    top: 0;
-    border-radius: 10px;
-}
-
-.stackedcards-overlay.left > div,
-.stackedcards-overlay.right > div,
-.stackedcards-overlay.top > div {
-    width: 100%;
-    height: 100%;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-}
-
-.stackedcards-overlay.left,
-.stackedcards-overlay.right,
-.stackedcards-overlay.top {
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    left: 0;
-    opacity: 0;
-    top: 0;
-    height: 100%;
-    font-size: 24px; /* this style was added only for better preview */
-    text-transform: uppercase; /* this style was added only for better preview */
-    font-weight: 500; /* this style was added only for better preview */
-    color: #fff; /* this style was added only for better preview */
-}
-
-.stackedcards-overlay.top {
-    background: #E38568;
-}
-
-.stackedcards-overlay.right {
-    background: #7BB3C5;
-}
-
-.stackedcards-overlay.left {
-    background: #E58D93;
-}
-
-.stackedcards-overlay.left:empty,
-.stackedcards-overlay.right:empty,
-.stackedcards-overlay.top:empty {
-  display: none !important;
-}
-
-.stackedcards-overlay-hidden {
-    display: none;
-}
-
-.stackedcards-origin-bottom {
-    -webkit-transform-origin: bottom;
-            -ms-transform-origin: bottom;
-        transform-origin: bottom;
-}
-
-.stackedcards-origin-top {
-    -webkit-transform-origin: top;
-            -ms-transform-origin: top;
-        transform-origin: top;
-}
-
-.stackedcards-bottom,
-.stackedcards-top,
-.stackedcards-none {
-    background: #fff; /* set card background background */
-    height: 100%;
-}
-
-.stackedcards .stackedcards-container > :nth-child(1) {
-    position: relative;
-    display: block;
-}
-
-/* global actions buttons*/
-.global-actions {
-    display: -webkit-inline-box;
-    display: -ms-inline-flexbox;
-    display: inline-flex;
-    width: 100%;
-    margin-top: 10px;
-}
-
-.top-action,
-.right-action,
-.left-action {
-    width: 100%;
-    height: 50px;
-    border-radius: 10px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    text-transform: uppercase;
-    font-weight: 500;
-    color: #fff;
-}
-
-.top-action {
-    background: #E38568;
-    margin: 0 10px; 
-}
-
-.right-action { background: #7BB3C5; }
-.left-action { background: #E58D93; }
-
-/* elements on stacked cards */
-.card-item { 
-  background: #FFFFFF; 
-  padding: 1em;
-  font-size: 2em;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-/* ==========================================================================
-   Helper classes
-   ========================================================================== */
-
-/*
- * Hide visually and from screen readers
- */
-
-.hidden,
-[hidden] {
-  display: none !important;
-}
-
-/*
- * Hide only visually, but have it available for screen readers:
- * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
- *
- * 1. For long content, line feeds are not interpreted as spaces and small width
- *    causes content to wrap 1 word per line:
- *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
- */
-
-.sr-only {
-  border: 0;
-  clip: rect(0, 0, 0, 0);
-  height: 1px;
-  margin: -1px;
+  background: #63BDF7;
   overflow: hidden;
-  padding: 0;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #333;
+  color: #f3f3f3;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #333;
+  color: #f3f3f3;
+}
+
+.demo {
   position: absolute;
-  white-space: nowrap;
-  width: 1px;
-  /* 1 */
+  left: 50%;
+  top: 5em;
+  width: 100%;
+  max-width: 40rem;
+  margin-left: -25rem;
+  background: #F6F6F5;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
 }
 
-/*
- * Extends the .sr-only class to allow the element
- * to be focusable when navigated to via the keyboard:
- * https://www.drupal.org/node/897638
- */
-
-.sr-only.focusable:active,
-.sr-only.focusable:focus {
-  clip: auto;
-  height: auto;
-  margin: 0;
-  overflow: visible;
-  position: static;
-  white-space: inherit;
-  width: auto;
+.content {
+  overflow: hidden;
+  position: relative;
+  height: 48rem;
+  padding-top: 1rem;
+  width: 100%;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+.card-cont {
+  position: relative;
+  width: 100%;
+  max-width: 39rem;
+  height: 32rem;
+  margin: 0 auto 1rem;
+}
+.card {
+  z-index: 2;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  transform-origin: 50% 100%;
+}
+.card.reset {
+  transition: transform 0.3s;
+  transform: translateX(0) !important;
+}
+.card.reset .card__choice {
+  transition: opacity 0.3s;
+  opacity: 0 !important;
+}
+.card.inactive {
+  transition: transform 0.3s;
+}
+.card.to-left {
+  transform: translateX(-30rem) rotate(-30deg) !important;
+}
+.card.to-right {
+  transform: translate(30rem) rotate(30deg) !important;
+}
+.card.below {
+  z-index: 1;
+}
+.card__top {
+  height: 20.5rem;
+  padding-top: 4rem;
+}
+.card__top.purple {
+  background: #7132B9;
+}
+.card__top.blue {
+  background: #248CB6;
+}
+.card__top.indigo {
+  background: #303F9F;
+}
+.card__top.cyan {
+  background: #26C6DA;
+}
+.card__top.lime {
+  background: #AFB42B;
+}
+.card__top.brown {
+  background: #795548;
 }
 
-/*
- * Hide visually and from screen readers, but maintain layout
- */
-
-.invisible {
-  visibility: hidden;
+.card__name {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #fff;
+}
+.card__we {
+  text-align: center;
+  font-size: 2.2rem;
+  line-height: 11.5rem;
+}
+.card__choice {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+}
+.card__choice:before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 2rem;
+  height: 2rem;
+  margin-left: -1rem;
+  color: #fff;
+  border-radius: 50%;
+  box-shadow: -2rem -3rem #fff, 2rem -3rem #fff;
+}
+.card__choice:after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 4rem;
+  height: 1.5rem;
+  margin-left: -2rem;
+  border: 0.6rem solid #fff;
+  border-bottom: none;
+  border-top-left-radius: 1.5rem;
+  border-top-right-radius: 1.5rem;
+}
+.card__choice.m--next {
+  background: #414141;
 }
 
-/*
- * Clearfix: contain floats
- *
- * For modern browsers
- * 1. The space content is one way to avoid an Opera bug when the
- *    `contenteditable` attribute is included anywhere else in the document.
- *    Otherwise it causes space to appear at the top and bottom of elements
- *    that receive the `clearfix` class.
- * 2. The use of `table` rather than `block` is only necessary if using
- *    `:before` to contain the top-margins of child elements.
- */
-
-.clearfix::before,
-.clearfix::after {
-  content: " ";
-  display: table;
+.card__drag {
+  z-index: 5;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  cursor: -webkit-grab;
+  cursor: grab;
 }
-
-.clearfix::after {
-  clear: both;
-}
-
-/* ==========================================================================
-   EXAMPLE Media Queries for Responsive Design.
-   These examples override the primary ('mobile first') styles.
-   Modify as content requires.
-   ========================================================================== */
-
-@media only screen and (min-width: 35em) {
-  /* Style adjustments for viewports that meet the condition */
+.tip {
+  text-align: center;
+  font-size: 2.2rem;
 }
