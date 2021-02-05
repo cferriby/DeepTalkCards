@@ -10,7 +10,7 @@ html, body {
 }
 
 body {
-  background: #63BDF7;
+  background: #ececec;
   overflow: hidden;
 }
 
@@ -38,7 +38,7 @@ footer {
   width: 100%;
   max-width: 40rem;
   margin: 5rem auto;
-  background: #F6F6F5;
+  background: #cacaca;
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
 }
 
