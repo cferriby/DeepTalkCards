@@ -261,9 +261,11 @@ body {
 /* elements on stacked cards */
 .card-item { 
   background: #FFFFFF; 
-  text-align: center;
   padding: 1em;
   font-size: 2em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* ==========================================================================
