@@ -6,10 +6,19 @@ $(document).ready(function() {
         cardContainer.appendChild(cardContainer.children[Math.random() * i | 0]);
     }
 
-    var backArray = ['#5d8aa8', '#9966cc', '#a52a2a', '#873260', '#004225', '#702963', '#002e63', '#e9692c'];
+    var backArray = [
+      'color1',
+      'color2',
+      'color3',
+      'color4',
+      'color5',
+      'color6',
+      'color7',
+      'color8'
+    ];
     for (var i = cardContainer.children.length-1; i >= 0; i--) {
       var rand = backArray[Math.floor(Math.random() * backArray.length)];
-      cardContainer.children[i].style.backgroundColor = rand;
+      cardContainer.children[i].classList.add(rand);
     }
 
     var animating = false;

@@ -180,3 +180,13 @@ a.nostylelink:visited {
   text-decoration: none;
   color: white;
 }
+
+
+div.color1 { background-color: #5d8aa8; }
+div.color2 { background-color: #9966cc; }
+div.color3 { background-color: #a52a2a; }
+div.color4 { background-color: #873260; }
+div.color5 { background-color: #004225; }
+div.color6 { background-color: #702963; }
+div.color7 { background-color: #002e63; }
+div.color8 { background-color: #e9692c; }
