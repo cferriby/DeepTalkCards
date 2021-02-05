@@ -116,33 +116,9 @@ footer {
   height: 100%;
   opacity: 0;
 }
-.card__choice:before {
-  content: '';
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  width: 2rem;
-  height: 2rem;
-  margin-left: -1rem;
-  color: #fff;
-  border-radius: 50%;
-  box-shadow: -2rem -3rem #fff, 2rem -3rem #fff;
-}
-.card__choice:after {
-  content: '';
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  width: 4rem;
-  height: 1.5rem;
-  margin-left: -2rem;
-  border: 0.6rem solid #fff;
-  border-bottom: none;
-  border-top-left-radius: 1.5rem;
-  border-top-right-radius: 1.5rem;
-}
+
 .card__choice.m--next {
-  background: #414141;
+  background: #363636a1;
 }
 
 .card__drag {
