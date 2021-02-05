@@ -108,6 +108,19 @@ $(document).ready(function () {
 		});
 	});
 
+	$(document).keydown(function(e) {
+		console.log(e.keyCode);
+		if(e.keyCode == 39) {
+			let curCard = $("div.card:not(.below)").last();
+			curCard.fadeOut().addClass("below");
+			curCard.prev().css('display', 'block');
+
+			let total = $('.card').length;
+			let current = $('.card.below').length + 1;
+			$('#count').html(`${current} of ${total}`);
+		}
+	});
+
 } catch(ex) {
 	$(body).append(`<p>${ex.message}</p>`)
 }
