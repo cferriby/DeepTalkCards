@@ -7,6 +7,8 @@ $(document).ready(function () {
 		cardContainer.appendChild(cardContainer.children[(Math.random() * i) | 0]);
 	}
 
+	$('#count').html(`${$('.card.below').length + 1} of ${$('.card').length}`);
+
 	var backArray = [
 		"color1",
 		"color2",
@@ -76,6 +78,10 @@ $(document).ready(function () {
 
 			pullDeltaX = 0;
 			animating = false;
+
+			let total = $('.card').length;
+			let current = $('.card.below').length + 1;
+			$('#count').html(`${current} of ${total}`);
 		}, 300);
 	}
 
