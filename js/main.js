@@ -1,13 +1,11 @@
 $(document).ready(function () {
+	try {
+
 	var cardContainer = document.querySelector("div.card-cont");
 
-	try {
 	for (var i = cardContainer.children.length; i >= 0; i--) {
 		cardContainer.appendChild(cardContainer.children[(Math.random() * i) | 0]);
 	}
-} catch(ex) {
-	
-}
 
 	var backArray = [
 		"color1",
@@ -98,4 +96,8 @@ $(document).ready(function () {
 			release();
 		});
 	});
+
+} catch(ex) {
+	$(body).append(`<p>${ex.message}</p>`)
+}
 });
