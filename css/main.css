@@ -259,7 +259,12 @@ body {
 .left-action { background: #E58D93; }
 
 /* elements on stacked cards */
-.card-item { background: #FFFFFF; }
+.card-item { 
+  background: #FFFFFF; 
+  text-align: center;
+  padding: 1em;
+  font-size: 2em;
+}
 
 /* ==========================================================================
    Helper classes

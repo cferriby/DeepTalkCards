@@ -5,8 +5,8 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
 		var stackedOptions = 'Top'; //Change stacked cards view from 'Bottom', 'Top' or 'None'.
 		var rotate = true; //Activate the elements' rotation for each move on stacked cards.
-		var items = 3; //Number of visible elements when the stacked options are bottom or top.
-		var elementsMargin = 10; //Define the distance of each element when the stacked options are bottom or top.
+		var items = 5; //Number of visible elements when the stacked options are bottom or top.
+		var elementsMargin = 15; //Define the distance of each element when the stacked options are bottom or top.
 		var useOverlays = true; //Enable or disable the overlays for swipe elements.
 		var maxElements; //Total of stacked cards on DOM.
 		var currentPosition = 0; //Keep the position of active stacked card.
@@ -676,8 +676,16 @@ document.addEventListener("DOMContentLoaded", function(event) {
 		// buttonTop.addEventListener('click', onActionTop, false);
 		buttonRight.addEventListener('click', onActionRight, false);
 
-	}
-	
+    }
+    
+    function shuffleCards() {
+        var cardContainer = document.querySelector('#stacked-cards-block div.stackedcards-container');
+        for (var i = cardContainer.children.length; i >= 0; i--) {
+            cardContainer.appendChild(cardContainer.children[Math.random() * i | 0]);
+        }
+    }
+    
+    shuffleCards();
 	stackedCards();
 	
 });
